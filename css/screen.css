@@ -118,7 +118,7 @@ html, body {
 ------------------------------------------------------------ */
 #index_header {
   height: 240px;
-  background: url(background.jpg);
+  background: url(../images/background.jpg);
 }
 #index_header a {
   position: relative;
@@ -128,7 +128,7 @@ html, body {
   height: 130px;
   margin: 0 auto;
   text-indent: -999em;
-  background: url(logo_large.png) no-repeat 50% 50%;
+  background: url(../images/logo_large.png) no-repeat 50% 50%;
 }
 
 /* Lab Header
@@ -155,11 +155,11 @@ html, body {
   width: 210px;
   height: 35px;
   text-indent: -999em;
-  background: url(logo_small.png);
+  background: url(../images/logo_small.png);
 }
 
 .blur #home_link {
-  background: url(logo_small_blur.png);
+  background: url(../images/logo_small_blur.png);
 }
 
 #pager {
@@ -168,11 +168,11 @@ html, body {
   left: 34px;
   width: 229px;
   height: 268px;
-  background: url(pager.png);
+  background: url(../images/pager.png);
 }
 
 .blur #pager {
-  background: url(pager_blur.png);
+  background: url(../images/pager_blur.png);
 }
 
 #edgecase_link {
@@ -236,7 +236,7 @@ html, body {
   left: 16px;
   width: 19px;
   height: 68px;
-  background: url(bookmarks.png) no-repeat 0px 0;
+  background: url(../images/bookmarks.png) no-repeat 0px 0;
 }
 #bookmark_link #bookmark.active {
   background-position: -19px 0;
@@ -303,7 +303,7 @@ html, body {
   color: #666;
   font-size: 18px;
   text-align: center;
-  background: url(line.png) no-repeat 0 50%;
+  background: url(../images/line.png) no-repeat 0 50%;
 }
 #attention_links h1 span {
   padding: 0 8px;
@@ -321,7 +321,7 @@ html, body {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  background: url(button.png);
+  background: url(../images/button.png);
 }
 #attention_links a:active {
   top: 1px;
@@ -334,7 +334,7 @@ html, body {
   width: 266px;
   height: 119px;
   text-indent: -999em;
-  background: url(start_button.png);
+  background: url(../images/start_button.png);
 }
 #start_immersion:active {
   bottom: -61px;
@@ -492,13 +492,13 @@ h2 em {
   font: 27px 'DINWeb-CondBold', helvetica, arial, serif;
   line-height: 60px;
   text-align: center;
-  background: url(green_circle.png) no-repeat 50% 50%;
+  background: url(../images/green_circle.png) no-repeat 50% 50%;
 }
 
 .blur h2 em {
   color: transparent;
   text-shadow: 0 0 2px #fff;
-  background-image: url(green_circle_blur.png);
+  background-image: url(../images/green_circle_blur.png);
 }
 
 h4 {
@@ -514,7 +514,7 @@ h4 {
   line-height: 36px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  background: url(label.png) no-repeat 100% 0;
+  background: url(../images/label.png) no-repeat 100% 0;
   -moz-border-radius: 3px 0 0 3px;
   -webkit-border-radius: 3px 0 0 3px;
   -o-border-radius: 3px 0 0 3px;
@@ -526,7 +526,7 @@ h4 {
 .blur h4 {
   color: transparent;
   text-shadow: 0 0 2px #fff;
-  background: url(label_blur.png) no-repeat 100% 0;
+  background: url(../images/label_blur.png) no-repeat 100% 0;
 }
 
 h4 em {
@@ -557,11 +557,11 @@ a {
   margin-bottom: 0.25em;
   padding-left: 22px;
   font: 18px courier, 'courier new', monospace;
-  background: url(prompt.png) no-repeat 0 50%;
+  background: url(../images/prompt.png) no-repeat 0 50%;
 }
 
 .blur .instructions pre {
-  background: url(prompt_blur.png) no-repeat 0 50%;
+  background: url(../images/prompt_blur.png) no-repeat 0 50%;
 }
 
 #main_content img {
@@ -680,7 +680,7 @@ ol {
   width: 19px;
   height: 46px;
   cursor: pointer;
-  background: url(bookmarks.png) no-repeat;
+  background: url(../images/bookmarks.png) no-repeat;
   z-index: 2;
 }
 
@@ -696,7 +696,7 @@ ol {
   width: 300px;
   height: 78px;
   margin-left: -150px;
-  background: url(no_bookmarks.png);
+  background: url(../images/no_bookmarks.png);
 }
 
 #index h1 {
@@ -709,7 +709,7 @@ ol {
   font: 24px 'DINWeb-CondBold', helvetica, arial, sans-serif;
   line-height: 54px;
   text-transform: uppercase;
-  background: url(index_heading_background.png) repeat-x;
+  background: url(../images/index_heading_background.png) repeat-x;
   z-index: 2;
 }
 
@@ -770,7 +770,7 @@ ol {
   line-height: 26px;
   text-decoration: none;
   text-shadow: 0 1px 0 #fff;
-  background: url(index_item_background.gif) no-repeat 0 100%;
+  background: url(../images/index_item_background.gif) no-repeat 0 100%;
 }
 
 #index li:last-child a {
@@ -848,7 +848,7 @@ ol {
   }
 
   .blur #pager {
-    background: url(pager_ipad_blur.png);
+    background: url(../images/pager_ipad_blur.png);
   }
 
   #pager {
@@ -856,7 +856,7 @@ ol {
     left: 21px;
     width: 227px;
     height: 129px;
-    background-image: url(pager_ipad.png);
+    background-image: url(../images/pager_ipad.png);
   }
   #pager .arrow {
     top: 6px;
@@ -891,7 +891,7 @@ ol {
     width: 84px;
     height: 23px;
     text-indent: -999em;
-    background: url(ipad-ec-logo.png);
+    background: url(../images/ipad-ec-logo.png);
   }
 
   .lab_title {

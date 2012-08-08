@@ -56,32 +56,32 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 @font-face {
   font-family: DINWeb-CondBold;
-  src: url("DINWeb-CondBold.eot");
+  src: url("../fonts/DINWeb-CondBold.eot");
 }
 
 @font-face {
   font-family: DINWeb-CondBold;
-  src: url("DINWeb-CondBold.woff") format("woff");
+  src: url("../fonts/DINWeb-CondBold.woff") format("woff");
 }
 
 @font-face {
   font-family: DINWeb-CondMedium;
-  src: url("DINWeb-CondMedium.eot");
+  src: url("../fonts/DINWeb-CondMedium.eot");
 }
 
 @font-face {
   font-family: DINWeb-CondMedium;
-  src: url("DINWeb-CondMedium.woff") format("woff");
+  src: url("../fonts/DINWeb-CondMedium.woff") format("woff");
 }
 
 @font-face {
   font-family: DINWebProRegular;
-  src: url(DINWebPro.eot);
+  src: url("../fonts/DINWebPro.eot");
 }
 
 @font-face {
   font-family: DINWebProRegular;
-  src: url(DINWebPro.woff) format("woff");
+  src: url("../fonts/DINWebPro.woff") format("woff");
 }
 
 .clear {
@@ -91,7 +91,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 html, body {
   padding-bottom: 20px;
   font-family: 'DINWebProRegular', helvetica, arial, serif;
-  background: url(background.jpg);
+  background: url(../images/background.jpg);
 }
 
 #index_body {

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lab 30 - Git Immersion - Brought to you by EdgeCase</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" media="screen" href="screen.css">
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script type="text/javascript">
+   var _gaq = _gaq || [];
+   _gaq.push(['_setAccount', 'UA-1142510-7']);
+   _gaq.push(['_trackPageview']);
+   (function() {
+     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+   })();
+  </script>
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="jquery.hotkeys.js"></script>
+  <script type="text/javascript" src="UI.js"></script>
+</head>
+
+<body data-lab-id="30">
+  <div id="image_preloader">
+    <img src="green_circle_blur.png">
+    <img src="label_blur.png">
+    <img src="logo_small_blur.png">
+    <img src="prompt_blur.png">
+    <img src="pager_blur.png">
+  </div>
+  <header id="header">
+    <a href="index.html" id="home_link">Git Immersion</a>
+    <nav id="pager">
+      <a id="arrow_next" class="arrow" href="lab_31.html">Next</a>
+  
+      <a id="arrow_previous" class="arrow" href="lab_29.html">Previous</a>
+  
+  <a id="table_of_contents_link" href="#">Table of Contents</a>
+  <a id="bookmark_link"><span id="bookmark"></span>Bookmark this lab</a>
+  <a id="edgecase_link" href="http://edgecase.com" target="_blank">EdgeCase</a>
+</nav>
+    <h1 class="lab_title"><em>lab 30</em> Resolving Conflicts</h1>
+    <a href="http://edgecase.com" target=_blank" id="other_edgecase_link">EdgeCase</a>
+  </header>
+
+  <div id="main_content">
+    <h1 class="lab_title"><em>lab 30</em>  Resolving Conflicts</h1>
+<h3>Goals</h3>
+<ul>
+	<li>Learn how to handle conflicts during a merge</li>
+</ul>
+<h2>Merge master to greet <em>01</em></h2>
+<p>Now go back to the greet branch and try to merge the new master.</p>
+<h4>Execute:</h4>
+<pre class="instructions">git checkout greet
+git merge master</pre>
+<h4>Output:</h4>
+<pre class="sample">$ git checkout greet
+Switched to branch 'greet'
+$ git merge master
+Auto-merging lib/hello.rb
+CONFLICT (content): Merge conflict in lib/hello.rb
+Automatic merge failed; fix conflicts and then commit the result.
+</pre>
+<p>If you open lib/hello.rb, you will see:</p>
+<h4>File: <em>lib/hello.rb</em></h4>
+<pre class="file">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+require 'greeter'
+
+# Default is World
+name = ARGV.first || "World"
+
+greeter = Greeter.new(name)
+puts greeter.greet
+=======
+# Default is World
+
+puts "What's your name"
+my_name = gets.strip
+
+puts "Hello, #{my_name}!"
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; master
+</pre>
+<p>The first section is the version on the head of the current branch (greet).  The second section is the version on the master branch.</p>
+<h2>Fix the Conflict <em>02</em></h2>
+<p>You need to manually resolve the conflict.  Modify <code>lib/hello.rb</code> to be the following.</p>
+<h4>File: <em>lib/hello.rb</em></h4>
+<pre class="file">require 'greeter'
+
+puts "What's your name"
+my_name = gets.strip
+
+greeter = Greeter.new(my_name)
+puts greeter.greet
+</pre>
+<h2>Commit the Conflict Resolution <em>03</em></h2>
+<h4>Execute:</h4>
+<pre class="instructions">git add lib/hello.rb
+git commit -m "Merged master fixed conflict."</pre>
+<h4>Output:</h4>
+<pre class="sample">$ git add lib/hello.rb
+$ git commit -m "Merged master fixed conflict."
+[greet 3165f66] Merged master fixed conflict.
+</pre>
+<h2>Advanced Merging <em>04</em></h2>
+<p>git doesn&#8217;t provide any graphical merge tools, but it will gladly work with any third party merge tool you wish to use.  See <a href="http://onestepback.org/index.cgi/Tech/Git/UsingP4MergeWithGit.red">http://onestepback.org/index.cgi/Tech/Git/UsingP4MergeWithGit.red</a> for a description of using the Perforce merge tool with git.</p>
+  </div>
+
+  <div id="index">
+  <h1>Table of Contents</h1>
+  <div id="show_bookmarks"></div>
+  <div id="no_bookmarks"></div>
+  <ul>
+    <li id="lab_0_link"><a href="index.html"><span>&nbsp;</span>Home Cover Page</a></li>
+          <li id="lab_1_link" data-lab-id="1"><a href="lab_01.html"><span>1:</span> Setup</a></li>
+          <li id="lab_2_link" data-lab-id="2"><a href="lab_02.html"><span>2:</span> More Setup</a></li>
+          <li id="lab_3_link" data-lab-id="3"><a href="lab_03.html"><span>3:</span> Create a Project</a></li>
+          <li id="lab_4_link" data-lab-id="4"><a href="lab_04.html"><span>4:</span> Checking Status</a></li>
+          <li id="lab_5_link" data-lab-id="5"><a href="lab_05.html"><span>5:</span> Making Changes</a></li>
+          <li id="lab_6_link" data-lab-id="6"><a href="lab_06.html"><span>6:</span> Staging Changes</a></li>
+          <li id="lab_7_link" data-lab-id="7"><a href="lab_07.html"><span>7:</span> Staging and Committing</a></li>
+          <li id="lab_8_link" data-lab-id="8"><a href="lab_08.html"><span>8:</span> Committing Changes</a></li>
+          <li id="lab_9_link" data-lab-id="9"><a href="lab_09.html"><span>9:</span> Changes, not Files</a></li>
+          <li id="lab_10_link" data-lab-id="10"><a href="lab_10.html"><span>10:</span> History</a></li>
+          <li id="lab_11_link" data-lab-id="11"><a href="lab_11.html"><span>11:</span> Aliases</a></li>
+          <li id="lab_12_link" data-lab-id="12"><a href="lab_12.html"><span>12:</span> Getting Old Versions</a></li>
+          <li id="lab_13_link" data-lab-id="13"><a href="lab_13.html"><span>13:</span> Tagging versions</a></li>
+          <li id="lab_14_link" data-lab-id="14"><a href="lab_14.html"><span>14:</span> Undoing Local Changes (before staging)</a></li>
+          <li id="lab_15_link" data-lab-id="15"><a href="lab_15.html"><span>15:</span> Undoing Staged Changes (before committing)</a></li>
+          <li id="lab_16_link" data-lab-id="16"><a href="lab_16.html"><span>16:</span> Undoing Committed Changes</a></li>
+          <li id="lab_17_link" data-lab-id="17"><a href="lab_17.html"><span>17:</span> Removing Commits from a Branch</a></li>
+          <li id="lab_18_link" data-lab-id="18"><a href="lab_18.html"><span>18:</span> Remove the oops tag</a></li>
+          <li id="lab_19_link" data-lab-id="19"><a href="lab_19.html"><span>19:</span> Amending Commits</a></li>
+          <li id="lab_20_link" data-lab-id="20"><a href="lab_20.html"><span>20:</span> Moving Files</a></li>
+          <li id="lab_21_link" data-lab-id="21"><a href="lab_21.html"><span>21:</span> More Structure</a></li>
+          <li id="lab_22_link" data-lab-id="22"><a href="lab_22.html"><span>22:</span> Git Internals: The .git directory</a></li>
+          <li id="lab_23_link" data-lab-id="23"><a href="lab_23.html"><span>23:</span> Git Internals: Working directly with Git Objects</a></li>
+          <li id="lab_24_link" data-lab-id="24"><a href="lab_24.html"><span>24:</span> Creating a Branch</a></li>
+          <li id="lab_25_link" data-lab-id="25"><a href="lab_25.html"><span>25:</span> Navigating Branches</a></li>
+          <li id="lab_26_link" data-lab-id="26"><a href="lab_26.html"><span>26:</span> Changes in Master</a></li>
+          <li id="lab_27_link" data-lab-id="27"><a href="lab_27.html"><span>27:</span> Viewing Diverging Branches</a></li>
+          <li id="lab_28_link" data-lab-id="28"><a href="lab_28.html"><span>28:</span> Merging</a></li>
+          <li id="lab_29_link" data-lab-id="29"><a href="lab_29.html"><span>29:</span> Creating a Conflict</a></li>
+          <li id="lab_30_link" data-lab-id="30"><a href="lab_30.html"><span>30:</span> Resolving Conflicts</a></li>
+          <li id="lab_31_link" data-lab-id="31"><a href="lab_31.html"><span>31:</span> Rebasing VS Merging</a></li>
+          <li id="lab_32_link" data-lab-id="32"><a href="lab_32.html"><span>32:</span> Resetting the Greet Branch</a></li>
+          <li id="lab_33_link" data-lab-id="33"><a href="lab_33.html"><span>33:</span> Resetting the Master Branch</a></li>
+          <li id="lab_34_link" data-lab-id="34"><a href="lab_34.html"><span>34:</span> Rebasing</a></li>
+          <li id="lab_35_link" data-lab-id="35"><a href="lab_35.html"><span>35:</span> Merging Back to Master</a></li>
+          <li id="lab_36_link" data-lab-id="36"><a href="lab_36.html"><span>36:</span> Multiple Repositories</a></li>
+          <li id="lab_37_link" data-lab-id="37"><a href="lab_37.html"><span>37:</span> Cloning Repositories</a></li>
+          <li id="lab_38_link" data-lab-id="38"><a href="lab_38.html"><span>38:</span> Review the Cloned Repository</a></li>
+          <li id="lab_39_link" data-lab-id="39"><a href="lab_39.html"><span>39:</span> What is Origin?</a></li>
+          <li id="lab_40_link" data-lab-id="40"><a href="lab_40.html"><span>40:</span> Remote Branches</a></li>
+          <li id="lab_41_link" data-lab-id="41"><a href="lab_41.html"><span>41:</span> Change the Original Repository</a></li>
+          <li id="lab_42_link" data-lab-id="42"><a href="lab_42.html"><span>42:</span> Fetching Changes</a></li>
+          <li id="lab_43_link" data-lab-id="43"><a href="lab_43.html"><span>43:</span> Merging Pulled Changes</a></li>
+          <li id="lab_44_link" data-lab-id="44"><a href="lab_44.html"><span>44:</span> Pulling Changes</a></li>
+          <li id="lab_45_link" data-lab-id="45"><a href="lab_45.html"><span>45:</span> Adding a Tracking Branch</a></li>
+          <li id="lab_46_link" data-lab-id="46"><a href="lab_46.html"><span>46:</span> Bare Repositories</a></li>
+          <li id="lab_47_link" data-lab-id="47"><a href="lab_47.html"><span>47:</span> Adding a Remote Repository</a></li>
+          <li id="lab_48_link" data-lab-id="48"><a href="lab_48.html"><span>48:</span> Pushing a Change</a></li>
+          <li id="lab_49_link" data-lab-id="49"><a href="lab_49.html"><span>49:</span> Pulling Shared Changes</a></li>
+          <li id="lab_50_link" data-lab-id="50"><a href="lab_50.html"><span>50:</span> Hosting your Git Repositories</a></li>
+          <li id="lab_51_link" data-lab-id="51"><a href="lab_51.html"><span>51:</span> Sharing Repos</a></li>
+          <li id="lab_52_link" data-lab-id="52"><a href="lab_52.html"><span>52:</span> Advanced / Future Topics</a></li>
+          <li id="lab_53_link" data-lab-id="53"><a href="lab_53.html"><span>53:</span> Thank You</a></li>
+      </ul>
+</div>
+
+  <div id="cover"></div>
+</body>
+</html>

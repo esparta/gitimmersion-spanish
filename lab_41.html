@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Lab 41 - Git Immersion - Brought to you by EdgeCase</title>
+  <title>Lab 41 - Git Immersion en Español</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type">    
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" media="screen" href="screen.css">
+  <link rel="stylesheet" media="screen" href="css/screen.css">
   <!--[if lt IE 9]>
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
   <script type="text/javascript">
    var _gaq = _gaq || [];
-   _gaq.push(['_setAccount', 'UA-1142510-7']);
+   _gaq.push(['_setAccount', 'UA-XXXXXXX-X']);
    _gaq.push(['_trackPageview']);
    (function() {
      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
@@ -18,56 +19,47 @@
      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
    })();
   </script>
-  <script type="text/javascript" src="jquery.js"></script>
-  <script type="text/javascript" src="jquery.hotkeys.js"></script>
-  <script type="text/javascript" src="UI.js"></script>
+  <script type="text/javascript" src="javascript/jquery.js"></script>
+  <script type="text/javascript" src="javascript/jquery.hotkeys.js"></script>
+  <script type="text/javascript" src="javascript/UI.js"></script>
 </head>
 
 <body data-lab-id="41">
-  <div id="image_preloader">
-    <img src="green_circle_blur.png">
-    <img src="label_blur.png">
-    <img src="logo_small_blur.png">
-    <img src="prompt_blur.png">
-    <img src="pager_blur.png">
-  </div>
   <header id="header">
-    <a href="index.html" id="home_link">Git Immersion</a>
+    <a href="index.html" id="home_link">Git Immersion en Español</a>
     <nav id="pager">
-      <a id="arrow_next" class="arrow" href="lab_42.html">Next</a>
-  
-      <a id="arrow_previous" class="arrow" href="lab_40.html">Previous</a>
-  
-  <a id="table_of_contents_link" href="#">Table of Contents</a>
-  <a id="bookmark_link"><span id="bookmark"></span>Bookmark this lab</a>
-  <a id="edgecase_link" href="http://edgecase.com" target="_blank">EdgeCase</a>
-</nav>
-    <h1 class="lab_title"><em>lab 41</em> Change the Original Repository</h1>
-    <a href="http://edgecase.com" target=_blank" id="other_edgecase_link">EdgeCase</a>
+      <a id="arrow_next" class="arrow" href="lab_42.html">Siguiente</a>  
+      <a id="arrow_previous" class="arrow" href="lab_40.html">Anterior</a>  
+      <a id="table_of_contents_link" href="#">Tabla de Contenidos</a>
+      <a id="bookmark_link"><span id="bookmark"></span>Añadir a favoritos</a>
+      <a id="edgecase_link" href="http://edgecase.com" target="_blank">EdgeCase</a>
+    </nav>
+    <h1 class="lab_title"><em>lab 41</em> Cambiar el Repositorio Original</h1>
+    <a href="http://edgecase.com" target="_blank" id="other_edgecase_link">EdgeCase</a>
   </header>
 
   <div id="main_content">
-    <h1 class="lab_title"><em>lab 41</em>  Change the Original Repository</h1>
-<h3>Goals</h3>
+    <h1 class="lab_title"><em>lab 41</em> Cambiar el Repositorio Original</h1>
+<h3>Metas</h3>
 <ul>
-	<li>Make some changes to the original repository so we can try to pull the changes</li>
+	<li>Hacer algunos cambios en el repositorio original así podemos tratar de enviar los cambios remotamente.</li>
 </ul>
-<h2>Make a change in the original <strong>hello</strong> repository <em>01</em></h2>
-<h4>Execute:</h4>
+<h2>Haga un cambio en el repositorio original <strong>hello</strong> <em>01</em></h2>
+<h4>Ejecute:</h4>
 <pre class="instructions">cd ../hello
 # (You should be in the original hello repository now)</pre>
-<p style="color:red;"><strong><span class="caps">NOTE</span>: Now in the <em>hello</em> repo</strong></p>
-<p>Make the following changes to <span class="caps">README</span>:</p>
-<h4>File: <em><span class="caps">README</span></em></h4>
+<p style="color:red;"><strong><span class="caps">NOTA</span>: En el repositorio <em>hello</em> </strong></p>
+<p>Haga el siguiente cambio a <span class="caps">README</span>:</p>
+<h4>Archivo: <em><span class="caps">README</span></em></h4>
 <pre class="file">This is the Hello World example from the git tutorial.
 (changed in original)
 </pre>
-<p>Now add and commit this change</p>
-<h4>Execute:</h4>
+<p>Ahora agregue y realice Commit de esto cambios</p>
+<h4>Ejecute:</h4>
 <pre class="instructions">git add README
 git commit -m "Changed README in original repo"</pre>
-<h2>Up Next <em>02</em></h2>
-<p>The original repository now has later changes that are not in the cloned version.  Next we will pull those changes across to the cloned repository.</p>
+<h2>Continuando <em>02</em></h2>
+<p>El repositorio original ahora tiene cambios posteriores que no están en la versión clonada. A continuación enviaremos esos cambios hacia el repositorio clonado.</p>
   </div>
 
   <div id="index">

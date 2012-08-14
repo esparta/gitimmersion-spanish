@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Lab 28 - Git Immersion - Brought to you by EdgeCase</title>
+  <title>Lab 28 - Git Immersion en Español</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type">    
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" media="screen" href="screen.css">
+  <link rel="stylesheet" media="screen" href="css/screen.css">
   <!--[if lt IE 9]>
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
   <script type="text/javascript">
    var _gaq = _gaq || [];
-   _gaq.push(['_setAccount', 'UA-1142510-7']);
+   _gaq.push(['_setAccount', 'UA-XXXXXXX-X']);
    _gaq.push(['_trackPageview']);
    (function() {
      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
@@ -18,47 +19,38 @@
      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
    })();
   </script>
-  <script type="text/javascript" src="jquery.js"></script>
-  <script type="text/javascript" src="jquery.hotkeys.js"></script>
-  <script type="text/javascript" src="UI.js"></script>
+  <script type="text/javascript" src="javascript/jquery.js"></script>
+  <script type="text/javascript" src="javascript/jquery.hotkeys.js"></script>
+  <script type="text/javascript" src="javascript/UI.js"></script>
 </head>
 
 <body data-lab-id="28">
-  <div id="image_preloader">
-    <img src="green_circle_blur.png">
-    <img src="label_blur.png">
-    <img src="logo_small_blur.png">
-    <img src="prompt_blur.png">
-    <img src="pager_blur.png">
-  </div>
   <header id="header">
-    <a href="index.html" id="home_link">Git Immersion</a>
+    <a href="index.html" id="home_link">Git Immersion en Español</a>
     <nav id="pager">
-      <a id="arrow_next" class="arrow" href="lab_29.html">Next</a>
-  
-      <a id="arrow_previous" class="arrow" href="lab_27.html">Previous</a>
-  
-  <a id="table_of_contents_link" href="#">Table of Contents</a>
-  <a id="bookmark_link"><span id="bookmark"></span>Bookmark this lab</a>
-  <a id="edgecase_link" href="http://edgecase.com" target="_blank">EdgeCase</a>
-</nav>
-    <h1 class="lab_title"><em>lab 28</em> Merging</h1>
-    <a href="http://edgecase.com" target=_blank" id="other_edgecase_link">EdgeCase</a>
+      <a id="arrow_next" class="arrow" href="lab_29.html">Siguiente</a>  
+      <a id="arrow_previous" class="arrow" href="lab_27.html">Anterior</a>  
+      <a id="table_of_contents_link" href="#">Tabla de Contenidos</a>
+      <a id="bookmark_link"><span id="bookmark"></span>Añadir a favoritos</a>
+      <a id="edgecase_link" href="http://edgecase.com" target="_blank">EdgeCase</a>
+    </nav>
+    <h1 class="lab_title"><em>lab 28</em> Fusionando (Merge)</h1>
+    <a href="http://edgecase.com" target="_blank" id="other_edgecase_link">EdgeCase</a>
   </header>
 
   <div id="main_content">
-    <h1 class="lab_title"><em>lab 28</em>  Merging</h1>
-<h3>Goals</h3>
+    <h1 class="lab_title"><em>lab 28</em>  Fusionando (Merge)</h1>
+<h3>Metas</h3>
 <ul>
-	<li>Learn how to merge two diverging branches to bring the changes back into a single branch.</li>
+	<li>Aprender a fusionar dos ramas divergentes para llevar los cambios de nuevo a una sola rama</li>
 </ul>
-<h2>Merge the branches <em>01</em></h2>
-<p>Merging brings the changes in two branches together.  Let&#8217;s go back to the greet branch and merge master onto greet.</p>
-<h4>Execute:</h4>
+<h2>Fusionar las ramas <em>01</em></h2>
+<p>La fusión junta los cambios de dos ramas. Regresemos a la rama "greet" y fusionemosla con la rama "master".</p>
+<h4>Ejecute:</h4>
 <pre class="instructions">git checkout greet
 git merge master
 git hist --all</pre>
-<h4>Output:</h4>
+<h4>Salida:</h4>
 <pre class="sample">$ git checkout greet
 Switched to branch 'greet'
 $ git merge master
@@ -81,10 +73,10 @@ $ git hist --all
 * 1b754e9 2012-03-06 | Added a default value (v1-beta) [Jim Weirich]
 * 3053491 2012-03-06 | Using ARGV [Jim Weirich]
 * 3cbf83b 2012-03-06 | First Commit [Jim Weirich]</pre>
-<p>By merging master into your greet branch periodically, you can pick up any changes to master and keep your changes in greet compatible with changes in the mainline.</p>
-<p>However, it does produce ugly commit graphs. Later we will look at the option of rebasing rather than merging.</p>
-<h2>Up Next <em>02</em></h2>
-<p>But first, what if the changes in master conflict with the changes in greet?</p>
+<p>Al fusionar "master" con "greet" periódicamente puede hacer que los cambios en greet sean más compatibles con la línea principal de desarrollo ("master").</p>
+<p>Sin embargo, esto produce unas feas gráficas de Commits. Más adelante veremos la opción de rebasar en vez de fusionar.</p>
+<h2>A continuación <em>02</em></h2>
+<p>Pero antes, ¿Qué tal si los cambios en master tienen conflicto con los cambios en greet?</p>
   </div>
 
   <div id="index">

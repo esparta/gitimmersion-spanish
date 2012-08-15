@@ -29,31 +29,29 @@
   <header id="header">
     <a href="index.html" id="home_link">Git Immersion en Español</a>
     <nav id="pager">
-      <a id="arrow_next" class="arrow" href="lab_18.html">Siguiente</a>
-  
+      <a id="arrow_next" class="arrow" href="lab_18.html">Siguiente</a> 
       <a id="arrow_previous" class="arrow" href="lab_16.html">Anterior</a>
-  
       <a id="table_of_contents_link" href="#">Tabla de Contenidos</a>
       <a id="bookmark_link"><span id="bookmark"></span>Añadir a favoritos</a>
       <a id="edgecase_link" href="http://edgecase.com" target="_blank">EdgeCase</a>
    </nav>
-    <h1 class="lab_title"><em>lab 17</em> Quitando  Commits de un Branch</h1>
+    <h1 class="lab_title"><em>lab 17</em> Quitando  Commits de una Ramificación (Branch)</h1>
     <a href="http://edgecase.com" target="_blank" id="other_edgecase_link">EdgeCase</a>
   </header>
 
   <div id="main_content">
-    <h1 class="lab_title"><em>lab 17</em>  Quitando  Commits de un Branch</h1>
+    <h1 class="lab_title"><em>lab 17</em> Quitando  Commits de una Ramificación (Branch)</h1>
 <h3>Metas</h3>
 <ul>
-	<li>Aprender a quitar los Commits más recientes de un branch.</li>
+	<li>Aprender a quitar los Commits más recientes de una ramificación.</li>
 </ul>
-<p>El comando <code>revert</code> de la sección previa es un poderoso comando que nos permite deshacer los efectos de cualquier Commit en el repositorio. Sin embrgo, ambos, el Commit original y el Commit &#8220;desecho&#8221; están invisibles en el historial del branch (usando el commando <code>git log</code>.</p>
+<p>El comando <code>revert</code> de la sección previa es un poderoso comando que nos permite deshacer los efectos de cualquier Commit en el repositorio. Sin embrgo, ambos, el Commit original y el Commit &#8220;deshecho&#8221; están invisibles en el historial de la ramificación (usando el commando <code>git log</code>.</p>
 <p>Frecuentemente hacemos un Commit e inmediatamente nos damos cuenta que fue un error. Sería bueno tener un comando &#8220;recuperador&#8221; que nos permitiera hacer de cuenta que ese commit nunca sucedió.  El comando &#8220;recuperador&#8221; incluso prevendría que el Commit defectuoso se mostrara en el historial que arroja <code>git log</code>. Sería como el Commit defectuoso nunca hubera sucedido.</p>
 <h2>El comando <code>reset</code> <em>01</em></h2>
 <p>Ya hemos visto el comando <code>reset</code> y lo hemos usado para establecer el área de Staging para que fuera consistente con un Commit en especial (usamos el Commit <span class="caps">HEAD</span> en nuestro anterior lab).</p>
-<p>Cuando se realiza un Commit referenciado (por ejemplo, un hash, branch o nombre de etiqueta), el comando <code>reset</code> realizará lo siguiente &#8230;</p>
+<p>Cuando se realiza un Commit referenciado (por ejemplo, un hash, una ramificación o nombre de etiqueta), el comando <code>reset</code> realizará lo siguiente &#8230;</p>
 <ol>
-	<li>Reescribir el branch actual y apuntarlo a un Commit en específico</li>
+	<li>Reescribir la ramificación actual y apuntarlo a un Commit en específico</li>
 	<li>Opcionalmente reestablecer el área de Staging para coincidir con el Commit especificado</li>
 	<li>Opcionalmente reestablecer el directorio de trabajo para coincidir con el Commit especificado</li>
 </ol>
@@ -69,8 +67,8 @@
 * 1b754e9 2012-03-06 | Added a default value (v1-beta) [Jim Weirich]
 * 3053491 2012-03-06 | Using ARGV [Jim Weirich]
 * 3cbf83b 2012-03-06 | First Commit [Jim Weirich]</pre>
-<p>Vemos que tenemos un Commit &#8220;Oops&#8221; y &#8220;Revert Oops&#8221; en los últimos dos Commits hechos en este branch. Vmos a quitarlos usando reset.</p>
-<h2>Primero, marquemos este Branch <em>03</em></h2>
+<p>Vemos que tenemos un Commit &#8220;Oops&#8221; y &#8220;Revert Oops&#8221; en los últimos dos Commits hechos en esta ramificación. Vamos a quitarlos usando reset.</p>
+<h2>Primero, marquemos esta Ramificación <em>03</em></h2>
 <p>Pero antes de quitar los Commits, marquemos el último Commit con una etiqueta, así podremos buscarlo de nuevo.</p>
 <h4>Ejecute:</h4>
 <pre class="instructions">git tag oops</pre>
@@ -102,8 +100,8 @@ $ git hist
 * 3cbf83b 2012-03-06 | First Commit [Jim Weirich]</pre>
 <p>Aquí vemos que los malos Commits no han desaparecido, aún están en el repository. Lo que sucede es que sólo no están listados en el branch principal. Si no los hemos etiquetado, seguirían aún en el repositorio, pero no habría forma de referenciarlos más que usando los valores de hash. Los Commits que no tienen referencia quedan en el repositorio hasta que el sistema ejecuta el software de recolección de basura.</p>
 <h2>Peligros del Reset <em>06</em></h2>
-<p>Los Resets en ramas locales son generalmente seguros. Cualquier accidente puede ser recuperado con sólo reestablecerlo al Commit deseado.</p>
-<p>Sin embargo, si el branch está compartido en repositorios remotos remote, puede confundir a otros usuarios que comparten el branch.</p>
+<p>Los Resets en ramificaciones locales son generalmente seguros. Cualquier accidente puede ser recuperado con sólo reestablecerlo al Commit deseado.</p>
+<p>Sin embargo, si la ramificación está compartido en repositorios remotos, puede confundir a otros usuarios que comparten el branch.</p>
   </div>
 
   <div id="index">
@@ -127,42 +125,42 @@ $ git hist
           <li id="lab_13_link" data-lab-id="13"><a href="lab_13.html"><span>13:</span> Etiquetar (Tagging) versiones</a></li>
           <li id="lab_14_link" data-lab-id="14"><a href="lab_14.html"><span>14:</span> Deshacer Cambios Locales (antes de staging)</a></li>
           <li id="lab_15_link" data-lab-id="15"><a href="lab_15.html"><span>15:</span> Deshacer Cambios en Stage (antes de commit)</a></li>
-          <li id="lab_16_link" data-lab-id="16"><a href="lab_16.html"><span>16:</span> Deshacer Cambios Enviados (Committed)</a></li>
-          <li id="lab_17_link" data-lab-id="17"><a href="lab_17.html"><span>17:</span> Quitando Commits de un Branch</a></li>
+          <li id="lab_16_link" data-lab-id="16"><a href="lab_16.html"><span>16:</span> Deshacer Cambios Confirmados (Committed)</a></li>
+          <li id="lab_17_link" data-lab-id="17"><a href="lab_17.html"><span>17:</span> Quitando Commits de una Ramificación (Branch)</a></li>
           <li id="lab_18_link" data-lab-id="18"><a href="lab_18.html"><span>18:</span> Quitando la etiqueta "oops"</a></li>
-          <li id="lab_19_link" data-lab-id="19"><a href="lab_19.html"><span>19:</span> Enmendar Commits (--ammend)</a></li>
-          <li id="lab_20_link" data-lab-id="20"><a href="lab_20.html"><span>20:</span> Mover Archivos</a></li>
+          <li id="lab_19_link" data-lab-id="19"><a href="lab_19.html"><span>19:</span> Enmendar Commits (--amend)</a></li>
+          <li id="lab_20_link" data-lab-id="20"><a href="lab_20.html"><span>20:</span> Moviendo Archivos</a></li>
           <li id="lab_21_link" data-lab-id="21"><a href="lab_21.html"><span>21:</span> Más Estructura</a></li>
           <li id="lab_22_link" data-lab-id="22"><a href="lab_22.html"><span>22:</span> Al Interior de Git: El directorio .git</a></li>
-          <li id="lab_23_link" data-lab-id="23"><a href="lab_23.html"><span>23:</span> Al Interior de Git: Directorio de trabajo con Objetos de GIt</a></li>
-          <li id="lab_24_link" data-lab-id="24"><a href="lab_24.html"><span>24:</span> Creando una rama (Branch)</a></li>
-          <li id="lab_25_link" data-lab-id="25"><a href="lab_25.html"><span>25:</span> Navegando ramas</a></li>
+          <li id="lab_23_link" data-lab-id="23"><a href="lab_23.html"><span>23:</span> Al Interior de Git: Directorio de trabajo con Objetos de Git</a></li>
+          <li id="lab_24_link" data-lab-id="24"><a href="lab_24.html"><span>24:</span> Creando una ramificación (Branch)</a></li>
+          <li id="lab_25_link" data-lab-id="25"><a href="lab_25.html"><span>25:</span> Navegando Ramificaciones</a></li>
           <li id="lab_26_link" data-lab-id="26"><a href="lab_26.html"><span>26:</span> Cambios en Master</a></li>
-          <li id="lab_27_link" data-lab-id="27"><a href="lab_27.html"><span>27:</span> Viendo las ramas divergentes</a></li>
-          <li id="lab_28_link" data-lab-id="28"><a href="lab_28.html"><span>28:</span> Fusión de ramas (Merge)</a></li>
+          <li id="lab_27_link" data-lab-id="27"><a href="lab_27.html"><span>27:</span> Viendo las ramificaciones divergentes</a></li>
+          <li id="lab_28_link" data-lab-id="28"><a href="lab_28.html"><span>28:</span> Fusionando (Merge)</a></li>
           <li id="lab_29_link" data-lab-id="29"><a href="lab_29.html"><span>29:</span> Creando un Conflicto</a></li>
           <li id="lab_30_link" data-lab-id="30"><a href="lab_30.html"><span>30:</span> Resolviendo Conflictos</a></li>
-          <li id="lab_31_link" data-lab-id="31"><a href="lab_31.html"><span>31:</span> Rebasing VS Merging</a></li>
-          <li id="lab_32_link" data-lab-id="32"><a href="lab_32.html"><span>32:</span> Restableciendo Branch Greet</a></li>
-          <li id="lab_33_link" data-lab-id="33"><a href="lab_33.html"><span>33:</span> Restableciendo el Branch Master</a></li>
-          <li id="lab_34_link" data-lab-id="34"><a href="lab_34.html"><span>34:</span> Rebasing</a></li>
-          <li id="lab_35_link" data-lab-id="35"><a href="lab_35.html"><span>35:</span> Fusión retroactiva al Branch Master</a></li>
-          <li id="lab_36_link" data-lab-id="36"><a href="lab_36.html"><span>36:</span> Multiples Repositorios</a></li>
+          <li id="lab_31_link" data-lab-id="31"><a href="lab_31.html"><span>31:</span> Cambio de Base (Rebasing) VS Fusión (Merging)</a></li>
+          <li id="lab_32_link" data-lab-id="32"><a href="lab_32.html"><span>32:</span> Restableciendo la ramificación Greet</a></li>
+          <li id="lab_33_link" data-lab-id="33"><a href="lab_33.html"><span>33:</span> Reestableciendo la ramificación Master</a></li>
+          <li id="lab_34_link" data-lab-id="34"><a href="lab_34.html"><span>34:</span> Cambio de Base (Rebasing)</a></li>
+          <li id="lab_35_link" data-lab-id="35"><a href="lab_35.html"><span>35:</span> Volver a Fusionar a la ramificación Principal</a></li>
+          <li id="lab_36_link" data-lab-id="36"><a href="lab_36.html"><span>36:</span> Múltiples Repositorios</a></li>
           <li id="lab_37_link" data-lab-id="37"><a href="lab_37.html"><span>37:</span> Clonando Repositorios</a></li>
           <li id="lab_38_link" data-lab-id="38"><a href="lab_38.html"><span>38:</span> Revisión del Repositorio Clonado</a></li>
-          <li id="lab_39_link" data-lab-id="39"><a href="lab_39.html"><span>39:</span> Que es un Origen (Origin)?</a></li>
-          <li id="lab_40_link" data-lab-id="40"><a href="lab_40.html"><span>40:</span> Branches remotos</a></li>
-          <li id="lab_41_link" data-lab-id="41"><a href="lab_41.html"><span>41:</span> Cambiar el repositorio Original</a></li>
+          <li id="lab_39_link" data-lab-id="39"><a href="lab_39.html"><span>39:</span> ¿Qué es "Origin"?</a></li>
+          <li id="lab_40_link" data-lab-id="40"><a href="lab_40.html"><span>40:</span> Ramificaciones Remotas</a></li>
+          <li id="lab_41_link" data-lab-id="41"><a href="lab_41.html"><span>41:</span> Cambiar el Repositorio Original</a></li>
           <li id="lab_42_link" data-lab-id="42"><a href="lab_42.html"><span>42:</span> Entregar Cambios (Fetch)</a></li>
-          <li id="lab_43_link" data-lab-id="43"><a href="lab_43.html"><span>43:</span> Fusionar Cambios Recibidos (Push)</a></li>
-          <li id="lab_44_link" data-lab-id="44"><a href="lab_44.html"><span>44:</span> Enviar Cambios (Pull)</a></li>
-          <li id="lab_45_link" data-lab-id="45"><a href="lab_45.html"><span>45:</span> Agregar un rastreo de Branch</a></li>
+          <li id="lab_43_link" data-lab-id="43"><a href="lab_43.html"><span>43:</span> Fusionar Cambios Recibidos</a></li>
+          <li id="lab_44_link" data-lab-id="44"><a href="lab_44.html"><span>44:</span> Recibiendo cambios remotos (comando Pull)</a></li>
+          <li id="lab_45_link" data-lab-id="45"><a href="lab_45.html"><span>45:</span> Agregando un rastreo de Ramificación</a></li>
           <li id="lab_46_link" data-lab-id="46"><a href="lab_46.html"><span>46:</span> Repositorios Escuetos (--bare)</a></li>
           <li id="lab_47_link" data-lab-id="47"><a href="lab_47.html"><span>47:</span> Agregando un Repositorio Remoto</a></li>
           <li id="lab_48_link" data-lab-id="48"><a href="lab_48.html"><span>48:</span> Enviando Cambios</a></li>
           <li id="lab_49_link" data-lab-id="49"><a href="lab_49.html"><span>49:</span> Recibiendo Cambios Compartidos</a></li>
-          <li id="lab_50_link" data-lab-id="50"><a href="lab_50.html"><span>50:</span> Hospedar su repositorio Git</a></li>
-          <li id="lab_51_link" data-lab-id="51"><a href="lab_51.html"><span>51:</span> Campartir Repos</a></li>
+          <li id="lab_50_link" data-lab-id="50"><a href="lab_50.html"><span>50:</span> Hospedando sus repositorios Git</a></li>
+          <li id="lab_51_link" data-lab-id="51"><a href="lab_51.html"><span>51:</span> Compartiendo Repositorios</a></li>
           <li id="lab_52_link" data-lab-id="52"><a href="lab_52.html"><span>52:</span> Tópicos Avanzados / Futuros</a></li>
           <li id="lab_53_link" data-lab-id="53"><a href="lab_53.html"><span>53:</span> Gracias</a></li>
       </ul>
